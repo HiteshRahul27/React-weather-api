@@ -60,7 +60,7 @@ function Weather() {
     };
 
     return (
-        <div style={{ padding: '20px', maxWidth: '900px', margin: '0 auto', fontFamily: 'Arial, sans-serif', backgroundColor: '#6faaffa6', minHeight: '100vh' }}>
+        <div style={{ padding: '20px', maxWidth: '900px', margin: '0 auto', fontFamily: 'Arial, sans-serif', backgroundColor: '#65afd3a6', minHeight: '100vh' }}>
             
             <div style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
                 <input 
@@ -68,7 +68,7 @@ function Weather() {
                     value={city} 
                     onChange={(e) => setCity(e.target.value)} 
                     placeholder="Search City..." 
-                    style={{ flex: 1, padding: '15px', borderRadius: '10px', border: '1px solid #4682B4', fontSize: '1.1rem' }}
+                    style={{ flex: 1, padding: '15px', borderRadius: '10px', border: '1px solid #65afd3a6', fontSize: '1.1rem' }}
                 />
                 
                 <button 
@@ -96,7 +96,7 @@ function Weather() {
 
             {forecast && selectedDay && (
                 <div>
-                    <div style={{ background: 'linear-gradient(135deg, #4682B4, #87CEEB)', color: 'white', padding: '30px', borderRadius: '20px', marginBottom: '30px', boxShadow: '0 8px 16px rgba(0,0,0,0.1)' }}>
+                    <div style={{ background: 'linear-gradient(135deg, #2080d4, #87CEEB)', color: 'white', padding: '30px', borderRadius: '20px', marginBottom: '30px', boxShadow: '0 8px 16px rgba(0,0,0,0.1)' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                             <div>
                                 <h1 style={{ margin: 0 }}>{forecast.cityName}</h1>
@@ -109,6 +109,7 @@ function Weather() {
                             </div>
                         </div>
 
+                        {/* DATA FACTORS RESTORED HERE */}
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '15px', marginTop: '25px', borderTop: '1px solid rgba(255,255,255,0.3)', paddingTop: '20px' }}>
                             <div><small>HUMIDITY</small><p style={{fontSize: '1.1rem', margin: '5px 0'}}>💧 {selectedDay.main.humidity}%</p></div>
                             <div><small>WIND</small><p style={{fontSize: '1.1rem', margin: '5px 0'}}>🌬️ {selectedDay.wind.speed} m/s</p></div>
